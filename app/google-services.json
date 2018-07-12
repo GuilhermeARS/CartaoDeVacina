@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "431716281813",
+    "firebase_url": "https://vacinapp-ed71b.firebaseio.com",
+    "project_id": "vacinapp-ed71b",
+    "storage_bucket": "vacinapp-ed71b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:431716281813:android:fee6fc211bd07c4f",
+        "android_client_info": {
+          "package_name": "com.example.elenialvesrosa.cartaovacinaapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "431716281813-g6s6jlr9auf0lktigrcfrcp1kjkp0cc2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.elenialvesrosa.cartaovacinaapp",
+            "certificate_hash": "4cf022f2d0e773f256cfc567502ff5bf5c3650d4"
+          }
+        },
+        {
+          "client_id": "431716281813-cpurvvpv60u9ksgfb7psqr86bmf9h2n1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApRMu4ajkwxuOWHxzC3Xt6UTH0kpCPcm0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "431716281813-cpurvvpv60u9ksgfb7psqr86bmf9h2n1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
