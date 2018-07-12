@@ -1,4 +1,4 @@
-package com.example.elenialvesrosa.cartaovacinaapp;
+package com.es.david.vacinas;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.elenialvesrosa.cartaovacinaapp", appContext.getPackageName());
+        assertEquals("com.es.david.vacinas", appContext.getPackageName());
     }
 }
