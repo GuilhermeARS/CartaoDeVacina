@@ -1,5 +1,6 @@
 package com.es.david.vacinas.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -15,8 +16,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.AdapterView;
+import android.widget.Toast;
 
 import com.es.david.vacinas.R;
+import com.es.david.vacinas.RecyclerItemClickListener;
 import com.es.david.vacinas.adapter.Adapter;
 import com.es.david.vacinas.modelo.Vacina;
 import com.google.firebase.database.DataSnapshot;
@@ -64,6 +68,39 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         recyclerView = findViewById(R.id.recyclerV);
+
+        //Click evento
+
+        recyclerView.addOnItemTouchListener(
+                new RecyclerItemClickListener(
+                        getApplicationContext(),
+                        recyclerView,
+                        new RecyclerItemClickListener.OnItemClickListener() {
+                            @Override
+                            public void onItemClick(View view, int position) {
+                                Toast.makeText(
+                                        getApplicationContext(),
+                                        "HELLO WORLD",
+                                        Toast.LENGTH_SHORT
+                                ).show();
+                                Intent intent = new Intent(getApplicationContext(), DetalhesActivity.class);
+                                intent.putExtra("vacina", listaVacinas.get(position));
+                                startActivity(intent);
+                            }
+
+                            @Override
+                            public void onLongItemClick(View view, int position) {
+
+                            }
+
+                            @Override
+                            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                            }
+                        }
+                )
+
+        );
 
 
 

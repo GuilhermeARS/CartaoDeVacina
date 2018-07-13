@@ -19,16 +19,19 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity android:name=".activity.CampanhasActivity">
+
 
 
         </activity>
         <activity
             android:name=".activity.DetalhesActivity"
             android:label="@string/title_activity_detalhes"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar">
+
+
+        </activity>
     </application>
 
 </manifest>

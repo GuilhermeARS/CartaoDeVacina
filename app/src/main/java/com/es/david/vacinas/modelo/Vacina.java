@@ -1,6 +1,8 @@
 package com.es.david.vacinas.modelo;
 
-public class Vacina {
+import java.io.Serializable;
+
+public class Vacina implements Serializable {
     private String nome;
     private String data;
     private String detalhes;
