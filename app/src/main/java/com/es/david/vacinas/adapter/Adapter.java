@@ -10,12 +10,13 @@ import android.widget.TextView;
 import com.es.david.vacinas.R;
 import com.es.david.vacinas.modelo.Vacina;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
 public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
 
-    private List<Vacina> listaVacinas;
+    private List<Vacina> listaVacinas = new ArrayList<>();
 
     public Adapter(List<Vacina> lista) {
         this.listaVacinas = lista;
