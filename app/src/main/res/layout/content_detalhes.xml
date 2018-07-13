@@ -9,10 +9,14 @@
     tools:showIn="@layout/activity_detalhes">
 
     <TextView
+        android:id="@+id/textoVacina"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="32dp"
         android:text="@string/large_text"
-        android:id="@+id/textoVacina"/>
+        android:textSize="18sp" />
 
 </android.support.v4.widget.NestedScrollView>
