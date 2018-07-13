@@ -25,6 +25,10 @@
 
 
         </activity>
+        <activity
+            android:name=".activity.DetalhesActivity"
+            android:label="@string/title_activity_detalhes"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
