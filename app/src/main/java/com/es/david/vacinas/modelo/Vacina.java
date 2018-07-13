@@ -1,41 +1,34 @@
 package com.es.david.vacinas.modelo;
 
 public class Vacina {
-    private String nomeVacina;
-    private String dataVacina;
-    private String detalhesVacina;
+    private String nome;
+    private String data;
+    private String detalhes;
 
     public Vacina() {
-
     }
 
-    public Vacina(String nomeVacina, String dataVacina, String detalhesVacina) {
-        this.nomeVacina = nomeVacina;
-        this.dataVacina = dataVacina;
-        this.detalhesVacina = detalhesVacina;
+    public String getNome() {
+        return nome;
     }
 
-    public String getNomeVacina() {
-        return nomeVacina;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    public void setNomeVacina(String nomeVacina) {
-        this.nomeVacina = nomeVacina;
+    public String getData() {
+        return data;
     }
 
-    public String getDataVacina() {
-        return dataVacina;
+    public void setData(String data) {
+        this.data = data;
     }
 
-    public void setDataVacina(String dataVacina) {
-        this.dataVacina = dataVacina;
+    public String getDetalhes() {
+        return detalhes;
     }
 
-    public String getDetalhesVacina() {
-        return detalhesVacina;
-    }
-
-    public void setDetalhesVacina(String detalhesVacina) {
-        this.detalhesVacina = detalhesVacina;
+    public void setDetalhes(String detalhes) {
+        this.detalhes = detalhes;
     }
 }

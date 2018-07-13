@@ -8,9 +8,18 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.es.david.vacinas.R;
+import com.es.david.vacinas.modelo.Vacina;
+
+import java.util.List;
 
 
 public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
+
+    private List<Vacina> listaVacinas;
+
+    public Adapter(List<Vacina> lista) {
+        this.listaVacinas = lista;
+    }
 
     @NonNull
     @Override
@@ -22,14 +31,17 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        holder.nomeVacina.setText("Vacina");
-        holder.data.setText("Data");
-        holder.detalhes.setText("Detalhes");
+
+        Vacina vacina = listaVacinas.get(position);
+        holder.nomeVacina.setText(vacina.getNome());
+        holder.data.setText(vacina.getData());
+        holder.detalhes.setText(vacina.getDetalhes());
     }
 
     @Override
     public int getItemCount() {
-        return 5;
+
+        return listaVacinas.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
