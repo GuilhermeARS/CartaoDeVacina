@@ -32,7 +32,6 @@ public class Vacinas extends Fragment {
     List<Vacina> listaVacinas;
     private DatabaseReference referencia = FirebaseDatabase.getInstance().getReference();
 
-//    private String[] cidades = {"Paragominas" , "Imperatriz", "Codó"};
 
 
     public static Vacinas newInstance() {
@@ -60,7 +59,34 @@ public class Vacinas extends Fragment {
                 recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
                 recyclerView.setAdapter(new Adapter(listaVacinas));
 
+                //Click Event
+                recyclerView.addOnItemTouchListener(
 
+                        new RecyclerItemClickListener(
+                                getContext(),
+                                recyclerView,
+                                new RecyclerItemClickListener.OnItemClickListener() {
+                                    @Override
+                                    public void onItemClick(View view, int position) {
+
+                                        Intent intent = new Intent(getContext(), DetalhesActivity.class);
+                                        intent.putExtra("vacina", listaVacinas.get(position));
+
+                                        startActivity(intent);
+                                    }
+
+                                    @Override
+                                    public void onLongItemClick(View view, int position) {
+                                        Toast.makeText(getContext(), "Mas aí segura memo", Toast.LENGTH_SHORT).show();
+                                    }
+
+                                    @Override
+                                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                                    }
+                                }
+                        )
+                );
 //
             }
 
@@ -70,8 +96,15 @@ public class Vacinas extends Fragment {
             }
         });
 
+
+
+
         return rootView;
+
+
+
     }
+
 
     @Override
     public String toString() {

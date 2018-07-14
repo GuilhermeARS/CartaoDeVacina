@@ -23,6 +23,7 @@ public class Main2Activity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main2);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -89,14 +90,6 @@ public class Main2Activity extends AppCompatActivity
             // Handle the camera action
         } else if (id == R.id.vacinas) {
             Main2Activity.this.getSupportFragmentManager().beginTransaction().replace(R.id.containerID, Vacinas.newInstance()).commit();
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
 
         }
 

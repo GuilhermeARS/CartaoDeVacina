@@ -69,7 +69,7 @@ public class LoginActivity extends AppCompatActivity {
         }
 
     public void abrirTelaPrincipal(){
-        Intent intentAbrirTelaPrincipal = new Intent(LoginActivity.this, MainActivity.class);
+        Intent intentAbrirTelaPrincipal = new Intent(LoginActivity.this, Main2Activity.class);
         startActivity(intentAbrirTelaPrincipal);
     }
 }
