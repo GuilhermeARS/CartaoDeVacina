@@ -17,6 +17,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+import java.security.Principal;
+
 public class LoginActivity extends AppCompatActivity {
 
     private EditText editEmail;
@@ -24,6 +26,7 @@ public class LoginActivity extends AppCompatActivity {
     private Button btnEntrar;
     private FirebaseAuth autenticacao;
     private Usuarios usuarios;
+    private Button btAbreCadastro;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +37,7 @@ public class LoginActivity extends AppCompatActivity {
         editEmail = (EditText) findViewById(R.id.editEmail);
         editSenha = (EditText) findViewById(R.id.editSenha);
         btnEntrar = (Button) findViewById(R.id.btnEntrar);
+        btAbreCadastro = (Button) findViewById(R.id.cadastrar);
 
         btnEntrar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,6 +55,12 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        btAbreCadastro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                abrirCadastroUsuario();
+            }
+        });
     }
         private void validarLogin(){
             autenticacao = ConfFirebase.getAuth();
@@ -71,5 +81,10 @@ public class LoginActivity extends AppCompatActivity {
     public void abrirTelaPrincipal(){
         Intent intentAbrirTelaPrincipal = new Intent(LoginActivity.this, Main2Activity.class);
         startActivity(intentAbrirTelaPrincipal);
+    }
+
+    public void abrirCadastroUsuario(){
+        Intent intent = new Intent(LoginActivity.this, CadastroActivity.class);
+        startActivity(intent);
     }
 }

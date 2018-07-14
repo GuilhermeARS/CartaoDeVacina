@@ -1,76 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".activity.CadastroActivity">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:orientation="vertical"
-            android:layout_height="wrap_content">
-
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
 
             <EditText
                 android:id="@+id/edtCadNome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textCapCharacters"
-                android:hint="Nome"/>
+                android:hint="Nome"
+                android:inputType="textCapCharacters" />
 
             <EditText
                 android:id="@+id/edtCadEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"
-                android:hint="Email"/>
+                android:hint="Email"
+                android:inputType="textEmailAddress" />
 
 
             <EditText
                 android:id="@+id/edtCadSenha"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                android:hint="Senha"/>
+                android:hint="Senha"
+                android:inputType="textPassword" />
 
             <EditText
-                android:id="@+id/edtCadNasc"
+                android:id="@+id/confirmarSenha"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="date"
-                android:hint="Senha"/>
+                android:hint="Senha"
+                android:inputType="textPassword" />
+
+
+            <EditText
+                android:id="@+id/edtCadNascimento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Senha"
+                android:inputType="date" />
 
             <RadioGroup
                 android:id="@+id/rgSexo"
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="horizontal">
 
 
                 <RadioButton
                     android:id="@+id/rbFeminino"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Feminino"
-                    android:checked="true" />
+                    android:checked="true"
+                    android:text="Feminino" />
 
                 <RadioButton
                     android:id="@+id/rbMasculino"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Masculino"
-                    android:checked="true" />
+                    android:checked="true"
+                    android:text="Masculino" />
                 />
 
             </RadioGroup>
 
+            <Button
+                android:id="@+id/btnGravar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cadastrar" />
 
 
         </LinearLayout>

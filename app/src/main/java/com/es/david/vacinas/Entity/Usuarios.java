@@ -1,15 +1,40 @@
 package com.es.david.vacinas.Entity;
 
+import com.es.david.vacinas.DAO.ConfFirebase;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.Exclude;
+
+import java.util.HashMap;
+import java.util.Map;
+
 public class Usuarios {
     private String id;
     private String email;
     private String senha;
     private String nome;
     private String sobrenome;
-    private String aniversario;
+    private String nascimento;
     private String sexo;
 
     public Usuarios() {
+    }
+
+    public void salvar(){
+        DatabaseReference referenciaFirebase = ConfFirebase.getRefFirebase();
+        referenciaFirebase.child("usuario").child(String.valueOf(getId())).setValue(this);
+    }
+
+    @Exclude
+
+    public Map<String, Object> toMap(){
+        HashMap<String, Object> hashMapUsuario = new HashMap<>();
+        hashMapUsuario.put("id", getId());
+        hashMapUsuario.put("email", getEmail());
+        hashMapUsuario.put("senha", getSenha());
+        hashMapUsuario.put("nascimento", getNascimento());
+        hashMapUsuario.put("sexo", getSexo());
+
+        return hashMapUsuario;
     }
 
     public String getEmail() {
@@ -44,12 +69,12 @@ public class Usuarios {
         this.sobrenome = sobrenome;
     }
 
-    public String getAniversario() {
-        return aniversario;
+    public String getNascimento() {
+        return nascimento;
     }
 
-    public void setAniversario(String aniversario) {
-        this.aniversario = aniversario;
+    public void setNascimento(String nascimento) {
+        this.nascimento = nascimento;
     }
 
     public String getSexo() {
