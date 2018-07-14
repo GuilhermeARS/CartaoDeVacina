@@ -9,6 +9,11 @@ public class Vacina implements Serializable {
 
     public Vacina() {
     }
+    public Vacina(String nome, String data, String detalhes) {
+        this.nome = nome;
+        this.data = data;
+        this.detalhes = detalhes;
+    }
 
     public String getNome() {
         return nome;

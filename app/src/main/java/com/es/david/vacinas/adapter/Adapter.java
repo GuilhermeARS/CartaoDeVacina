@@ -16,7 +16,7 @@ import java.util.List;
 
 public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
 
-    private List<Vacina> listaVacinas = new ArrayList<>();
+    private List<Vacina> listaVacinas;
 
     public Adapter(List<Vacina> lista) {
         this.listaVacinas = lista;

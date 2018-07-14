@@ -115,7 +115,7 @@ public class MainActivity extends AppCompatActivity
                     Vacina vacina = vacinaSnapshot.getValue(Vacina.class);
                     listaVacinas.add(vacina);
                 }
-                adapter = new Adapter(listaVacinas);
+//                adapter = new Adapter(listaVacinas);
 
                 RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
                 recyclerView.setLayoutManager(layoutManager);

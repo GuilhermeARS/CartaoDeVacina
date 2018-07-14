@@ -40,12 +40,12 @@ public class CampanhasActivity extends AppCompatActivity {
                     Vacina vacina = vacinaSnapshot.getValue(Vacina.class);
                     listaVacinas.add(vacina);
                 }
-                Adapter adapter = new Adapter(listaVacinas);
+//                Adapter adapter = new Adapter(getActivity listaVacinas);
 
                 RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
                 recyclerView.setLayoutManager(layoutManager);
 //                recyclerView.setHasFixedSize(true);
-                recyclerView.setAdapter(adapter);
+//                recyclerView.setAdapter(new Adapter());
             }
 
             @Override
