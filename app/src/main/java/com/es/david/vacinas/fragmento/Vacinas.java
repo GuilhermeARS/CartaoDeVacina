@@ -35,7 +35,7 @@ public class Vacinas extends Fragment {
 
 
     public static Vacinas newInstance() {
-        Vacinas campanhas = new Vacinas();
+        Vacinas vacinas = new Vacinas();
         return new Vacinas();
     }
 
@@ -44,7 +44,8 @@ public class Vacinas extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View rootView = inflater.inflate(R.layout.activity_campanhas, null);
 
-        final DatabaseReference vacinas = referencia.child("vacinas");
+        final DatabaseReference vacinas = referencia.child("usuarios").child("usuario").child("minhaVacinas");
+
         listaVacinas = new ArrayList<Vacina>();
 
         vacinas.addValueEventListener(new ValueEventListener() {
@@ -71,13 +72,14 @@ public class Vacinas extends Fragment {
 
                                         Intent intent = new Intent(getContext(), DetalhesActivity.class);
                                         intent.putExtra("vacina", listaVacinas.get(position));
+                                        intent.putExtra("tipo", "vacina");
 
                                         startActivity(intent);
                                     }
 
                                     @Override
                                     public void onLongItemClick(View view, int position) {
-                                        Toast.makeText(getContext(), "Mas aí segura memo", Toast.LENGTH_SHORT).show();
+
                                     }
 
                                     @Override

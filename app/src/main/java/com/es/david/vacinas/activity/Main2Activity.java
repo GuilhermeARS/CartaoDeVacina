@@ -87,10 +87,10 @@ public class Main2Activity extends AppCompatActivity
 
         if (id == R.id.campanhas) {
             Main2Activity.this.getSupportFragmentManager().beginTransaction().replace(R.id.containerID, Campanhas.newInstance()).commit();
-            // Handle the camera action
+            getSupportActionBar().setTitle("Campanhas");
         } else if (id == R.id.vacinas) {
             Main2Activity.this.getSupportFragmentManager().beginTransaction().replace(R.id.containerID, Vacinas.newInstance()).commit();
-
+            getSupportActionBar().setTitle("Minhas Vacinas");
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
