@@ -13,7 +13,6 @@ public class Usuarios {
     private String senha;
     private String nome;
     private String sobrenome;
-    private String nascimento;
     private String sexo;
 
     public Usuarios() {
@@ -31,7 +30,6 @@ public class Usuarios {
         hashMapUsuario.put("id", getId());
         hashMapUsuario.put("email", getEmail());
         hashMapUsuario.put("senha", getSenha());
-        hashMapUsuario.put("nascimento", getNascimento());
         hashMapUsuario.put("sexo", getSexo());
 
         return hashMapUsuario;
@@ -69,13 +67,6 @@ public class Usuarios {
         this.sobrenome = sobrenome;
     }
 
-    public String getNascimento() {
-        return nascimento;
-    }
-
-    public void setNascimento(String nascimento) {
-        this.nascimento = nascimento;
-    }
 
     public String getSexo() {
         return sexo;

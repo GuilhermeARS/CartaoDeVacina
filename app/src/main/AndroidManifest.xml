@@ -18,12 +18,22 @@
             android:name=".activity.DetalhesActivity"
             android:label="@string/title_activity_detalhes"
             android:theme="@style/AppTheme.NoActionBar" />
+<<<<<<< Updated upstream
         <activity android:name=".activity.LoginActivity"></activity>
         <activity android:name=".activity.CadastroActivity" />
+=======
+        <activity android:name=".activity.LoginActivity">
+
+        </activity>
+        <activity android:name=".activity.CadastroActivity" >
+
+    </activity>
+>>>>>>> Stashed changes
         <activity
             android:name=".activity.Main2Activity"
             android:label="@string/title_activity_main2"
             android:theme="@style/AppTheme.NoActionBar">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

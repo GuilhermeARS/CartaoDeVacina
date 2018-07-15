@@ -31,7 +31,6 @@ public class CadastroActivity extends AppCompatActivity {
     private EditText edtCadNome;
     private EditText edtCadSenha;
     private EditText edtCadSexo;
-    private EditText edtCadNascimento;
     private EditText confirmarSenha;
     private RadioButton rbMasculino;
     private RadioButton rbFeminino;
@@ -48,7 +47,6 @@ public class CadastroActivity extends AppCompatActivity {
         edtCadNome = (EditText) findViewById(R.id.edtCadNome);
         edtCadSenha = (EditText) findViewById(R.id.edtCadSenha);
         confirmarSenha = (EditText) findViewById(R.id.confirmarSenha);
-        edtCadNascimento = (EditText) findViewById(R.id.edtCadNascimento);
         rbFeminino = (RadioButton) findViewById(R.id.rbFeminino);
         rbMasculino = (RadioButton) findViewById(R.id.rbMasculino);
         btnGravar = (Button) findViewById(R.id.btnGravar);
@@ -62,7 +60,6 @@ public class CadastroActivity extends AppCompatActivity {
                     usuarios.setNome(edtCadNome.getText().toString());
                     usuarios.setEmail(edtCadEmail.getText().toString());
                     usuarios.setSenha(edtCadSenha.getText().toString());
-                    usuarios.setNascimento(edtCadNascimento.getText().toString());
 
                     if (rbFeminino.isChecked()) {
                         usuarios.setSexo("Feminino");
