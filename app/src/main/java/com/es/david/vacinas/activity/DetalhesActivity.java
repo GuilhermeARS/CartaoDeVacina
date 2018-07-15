@@ -19,7 +19,6 @@ import java.util.List;
 
 public class DetalhesActivity extends AppCompatActivity {
     Vacina vacina;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,10 +32,9 @@ public class DetalhesActivity extends AppCompatActivity {
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fabAddVacina);
 
-       if (tipo.equals("vacina")) {
-        fab.setImageResource(android.R.drawable.ic_media_pause);
-
-      }
+        if (tipo.equals("vacina")) {
+          //  fab;
+        }
 
         // Toolbar toolbar = findViewById(R.id.toolbar);
 

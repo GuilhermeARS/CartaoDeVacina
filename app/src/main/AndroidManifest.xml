@@ -17,11 +17,8 @@
         <activity
             android:name=".activity.DetalhesActivity"
             android:label="@string/title_activity_detalhes"
-
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".activity.LoginActivity">
-
-        </activity>
+        <activity android:name=".activity.LoginActivity"></activity>
         <activity android:name=".activity.CadastroActivity" />
         <activity
             android:name=".activity.Main2Activity"
@@ -33,6 +30,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activity.DetalhesMeusActivity"
+            android:label="@string/title_activity_detalhes_meus"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

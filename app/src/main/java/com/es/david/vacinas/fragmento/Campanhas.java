@@ -15,6 +15,7 @@ import android.widget.Toast;
 import com.es.david.vacinas.R;
 import com.es.david.vacinas.RecyclerItemClickListener;
 import com.es.david.vacinas.activity.DetalhesActivity;
+import com.es.david.vacinas.activity.DetalhesMeusActivity;
 import com.es.david.vacinas.adapter.Adapter;
 import com.es.david.vacinas.modelo.Vacina;
 import com.google.firebase.database.DataSnapshot;
@@ -69,7 +70,7 @@ public class Campanhas extends Fragment {
                                     @Override
                                     public void onItemClick(View view, int position) {
 
-                                        Intent intent = new Intent(getContext(), DetalhesActivity.class);
+                                        Intent intent = new Intent(getContext(), DetalhesMeusActivity.class);
                                         intent.putExtra("vacina", listaVacinas.get(position));
                                         intent.putExtra("tipo", "campanha");
 
