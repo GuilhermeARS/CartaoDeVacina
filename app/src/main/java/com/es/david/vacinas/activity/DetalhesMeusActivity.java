@@ -1,5 +1,6 @@
 package com.es.david.vacinas.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.es.david.vacinas.R;
+import com.es.david.vacinas.fragmento.Campanhas;
 import com.es.david.vacinas.modelo.Vacina;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -71,5 +73,9 @@ public class DetalhesMeusActivity extends AppCompatActivity {
         vacinasSetada.push().setValue(getVacina());
 
         Toast.makeText(getApplicationContext(), (getVacina().getNome() + " adicionada a MINHAS VACINAS") , Toast.LENGTH_SHORT).show();
+
+        Intent i = new Intent(this, Main2Activity.class);
+        i.putExtra("frgToLoad", "vacinas");
+        startActivity(i);
     }
 }

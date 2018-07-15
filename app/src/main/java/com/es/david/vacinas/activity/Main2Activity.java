@@ -45,6 +45,21 @@ public class Main2Activity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+//
+        Bundle extras = getIntent().getExtras();
+        if(extras != null) {
+            String toOpen = extras.getString("frgToLoad");
+
+            if (toOpen.equals("campanhas")) {
+                Main2Activity.this.getSupportFragmentManager().beginTransaction().replace(R.id.containerID, Campanhas.newInstance()).commit();
+                getSupportActionBar().setTitle("Campanhas");
+            } else if (toOpen.equals("vacinas")) {
+                Main2Activity.this.getSupportFragmentManager().beginTransaction().replace(R.id.containerID, Vacinas.newInstance()).commit();
+                getSupportActionBar().setTitle("Minhas Vacinas");
+            }
+        }
+
+
     }
 
     @Override
