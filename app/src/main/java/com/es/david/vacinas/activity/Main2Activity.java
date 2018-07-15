@@ -45,6 +45,9 @@ public class Main2Activity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        Main2Activity.this.getSupportFragmentManager().beginTransaction().replace(R.id.containerID, Vacinas.newInstance()).commit();
+        getSupportActionBar().setTitle("Minhas Vacinas");
 //
         Bundle extras = getIntent().getExtras();
         if(extras != null) {
